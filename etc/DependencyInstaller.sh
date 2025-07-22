@@ -10,7 +10,7 @@ else
 fi
 
 # package versions
-klayoutVersion=0.28.8
+klayoutVersion=0.30.2
 
 _versionCompare() {
     local a b IFS=. ; set -f
