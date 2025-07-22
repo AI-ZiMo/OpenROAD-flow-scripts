@@ -89,7 +89,7 @@ _installUbuntuPackages() {
         if [[ $1 == 20.04 ]]; then
             klayoutChecksum=15a26f74cf396d8a10b7985ed70ab135
         else
-            klayoutChecksum=db751264399706a23d20455bb7624264
+            klayoutChecksum=ccb9e7f4effdf98ba469d381674676fe
         fi
         lastDir="$(pwd)"
         # temp dir to download and compile
@@ -98,6 +98,8 @@ _installUbuntuPackages() {
         cd ${baseDir}
         wget https://www.klayout.org/downloads/Ubuntu-${1%.*}/klayout_${klayoutVersion}-1_amd64.deb
         md5sum -c <(echo "${klayoutChecksum} klayout_${klayoutVersion}-1_amd64.deb") || exit 1
+        # Install KLayout dependencies
+        apt-get install -y libgit2-dev libgit2-1.1
         dpkg -i klayout_${klayoutVersion}-1_amd64.deb
         cd ${lastDir}
         rm -rf "${baseDir}"
