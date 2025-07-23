@@ -72,7 +72,7 @@
 
 # DESIGN_CONFIG=./designs/asap7/aes/config.mk
 # DESIGN_CONFIG=./designs/asap7/ethmac/config.mk
-# DESIGN_CONFIG=./designs/asap7/gcd/config.mk
+DESIGN_CONFIG=./designs/asap7/gcd/config.mk
 # DESIGN_CONFIG=./designs/asap7/ibex/config.mk
 # DESIGN_CONFIG=./designs/asap7/jpeg/config.mk
 # DESIGN_CONFIG=./designs/asap7/megaboom/config.mk
@@ -102,7 +102,7 @@
 #DESIGN_CONFIG=./designs/ihp-sg13g2/riscv32i/config.mk
 
 # Default design
-DESIGN_CONFIG ?= ./designs/nangate45/gcd/config.mk
+#DESIGN_CONFIG ?= ./designs/nangate45/gcd/config.mk
 
 # Default TNS_END_PERCENT value
 export TNS_END_PERCENT ?=5
