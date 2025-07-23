@@ -16,7 +16,7 @@ fi
 export OPENROAD=${modroot}/OpenROAD
 echo "OPENROAD: ${OPENROAD}"
 
-export PATH=${modroot}/install/OpenROAD/bin:${modroot}/install/yosys/bin:${modroot}/install/LSOracle/bin:$PATH
+export PATH=${modroot}/install/OpenROAD/bin:${modroot}/install/yosys/bin:${modroot}/install/LSOracle/bin:${modroot}/../dependencies/bin:$PATH
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
   export PATH="/Applications/KLayout/klayout.app/Contents/MacOS:$PATH"
